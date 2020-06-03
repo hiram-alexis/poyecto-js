@@ -5,8 +5,10 @@ $(document).ready(function(){
     captions: true,
     slideWidth: 1200,
     responsive: true,
-    pager: true
+    pager: true,
+    touchEnabled: true
   });
+ //Opciones del Slider: https://bxslider.com/options/
  //Posts
  var posts = [
 {
@@ -70,5 +72,14 @@ $("#to-green").click(function(){
 		theme.attr("href", "css/red.css");
 		});
 
-		
+		//Scroll arriba de la web
+
+		$('.subir').click(function(e){
+			e.preventDefault();
+		$('html, body').animate({
+			scrollTop:0
+
+			}, 500);
+		return false;
+		});
 });
