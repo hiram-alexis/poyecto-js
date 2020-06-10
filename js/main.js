@@ -119,6 +119,18 @@ $("#to-green").click(function(){
 			var reloj = moment().format("hh:mm:ss");
 			$('#reloj').html(reloj);
 		}, 1000);
-
 	}
+
+		// Validación
+	if (window.location.href.indexOf('contact') > -1) {
+			
+			$("form input[name='date']").datepicker({
+				dateFormat: 'dd-mm-yy'
+			});
+
+			 $ . validate ({
+			    lang : 'es' 
+			});
+		}
+
 });
